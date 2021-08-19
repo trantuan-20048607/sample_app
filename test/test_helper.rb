@@ -1,6 +1,10 @@
 ENV['RAILS_ENV'] ||= 'test'
 require_relative "../config/environment"
 require "rails/test_help"
+require "minitest/reporters"
+
+# Conflict with Jetbrains Test Module
+# Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
